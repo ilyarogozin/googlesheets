@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "poetic-brace-350715",
+  "private_key_id": "dc07dea223078a36d02fefc939cc7780e100963a",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQCrRpc+7gqHF1Xp\n/O4Y5Dz5DG9hDhNbBx9FLyZiFZEsqfyhTa9u9EBj2elTPV1aMXRImFfPi+I41Ray\nAk2iwcK3Ljbf1boBJmbu/7uWYEzyvp8aSLuWU+hFXkDTJA5eAjQBreLEbvl+buwK\n2QAPRsO8XM0X8fk0taOCseHsfUlSMoFlw7GwGo6m2WOYfqsAOwa86gP8zDnq4Pz4\nLTRE3ScVFSVfV2a2ZnqXt0PcPBKJ4macedY+hS0fpdpFPPpWoFD+xI6UPuX6JbAS\nlFvjAlsXomRV9ZNE2uKRLzzFNDPjsJ0AC+r65/+Ah2VeHR+vEKEiRksbCojX19Ea\nZ1VpDwxBAgMBAAECggEAAj2dTS0VTWziWnos/b2fqBTv8JW77lcOo0uxfXtBf9N1\n+wC+jK2smXnQdf6xpdRLjIcUsAIJGrv77OZ/kENnahjUTjOYODthwZruH/Kg0xSo\nFXKR5K6ylVS9NZ3tQ7DU8BgvpSj8AdnO4/nwiKKg/Sn8I2XuoBBHxDYSSfMeJlF+\nFdz/ecAIFDL6lvGT8Ku6Xz0Bh0BVIv012FksomYHbLDgDMHjw1mq6TJupFFRy+3Y\nzSJC07kqvd/WaBbkL5qXhqfdOcQMgsXzhnEc5ccrCkGPKJHLl6r4COkNwPTGIH2Q\nd9f1P1JMDceSOeGJfTqdwkumWaXabYj/Qk78UOmfgQKBgQDiMembXaqoLiVsqkxc\nYRJI/CWE9VZ2CpGXavtRvJ8X9n+U+oUfEuAM42yF3UlkETZz8Y8eOjEDmGy9q2DF\nxZ++mbozUXd0j+/pXRBlnT+F/ZhdwAI1dtbub92GHuISAyu+gPEejavVBj3WfW6X\nkDyVkKKd2SA0s2zDh/uPMxSZYQKBgQDB2B+0r16rsXRRIGIwsFouhDp4TwzYfps2\nW4MH3vha0ehP+MBby9rZrvbZsJSq44XFqV41Y+pS8dT22gqz1wyzUIIWZeSVolsC\npQ1SdMTKTPSqPzmsHrCgAJj9OZcLJJOpVqGLqX+u/VREp/JP6CfW5RWBplQnnJWD\nfynvq4b+4QKBgQCwLVoblgAHEDI8CgSB62WXjTUX8xMNy7uMaVooVra/rlG+0sV+\n52+0+iobtbilBTcZZWsoiwCEIWOI84PjZsK+bPP3ZpuZIUcmx0KvMqQ4k8XqN1RB\nGjfb7StofINuriOTNNEZEBVnTX46ouXRjRlzEP1n3qbUBXBQd4i7B3ki4QKBgACt\nZab2+ei1rQdfiphK9XW2JpInDI9xGc+90B5l7A49L4egAeQQOUqLbvdhw5M5Sk1f\ngyHCoJ37lFfseR8ZwEScImg7oOnY8GJ4+yvvloRycmRp5iSw0sMsXVx9KAb08MMl\nt1jKldShs/qtb45R7Fm24TVbxG2DAY69EgNxYP5hAoGAdgrpo0Beb6JEd31M/YiD\n/YKDeRg4BJIna/+mfCQtlhFF5EWmEY/41nshko+ka6IoC7lVvpWAXWjI0IGVvuad\n5ESNxeAdFBlVOlevWQZTVtPaL80VUkmRUK8CXNE+xaEoqtOeExjnbCYet/qKqBig\nLbvTMRSwy8aOUk9GAjmKdto=\n-----END PRIVATE KEY-----\n",
+  "client_email": "account@poetic-brace-350715.iam.gserviceaccount.com",
+  "client_id": "108099019148095235597",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/account%40poetic-brace-350715.iam.gserviceaccount.com"
+}
