@@ -22,7 +22,7 @@ POSTGRES_PASSWORD=postgres
 DB_HOST=db
 DB_PORT=5432
 ALLOWED_HOSTS='127.0.0.1 localhost'
-CHAT_ID='<id вашего чата в телеграме>>'
+CHAT_ID='<id вашего чата в телеграме>'
 SPREADSHEET_ID='1uA_FvQ_metf0MDKgyMRhNok0_Y-nktspVhbkM1b9AMM'
 TELEGRAM_TOKEN='5322391216:AAGzwADg6X99--X-RQ9AA8XPRjUMy-mpsWQ'
 ```
