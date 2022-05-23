@@ -24,8 +24,8 @@ CREDENTIALS_FILE = 'creds.json'
 SPREADSHEET_ID = os.getenv('SPREADSHEET_ID')
 
 # ID телеграм чата, куда нужно отправлять сообщение
-# (установите свой id чата(посмотрите его, отправив сообщение телеграм боту t.me/userinfobot) для теста в .env файл и
-# напишите боту t.me/GoogleSheetsTestMyBot, чтобы отправка сообщений заработала)
+# (установите свой id чата(посмотрите его, отправив сообщение телеграм боту t.me/userinfobot) для теста в .env файл
+# и активируйте бота t.me/GoogleSheetsTestMyBot, чтобы отправка сообщений заработала)
 CHAT_ID = os.getenv('CHAT_ID')
 
 # токен для получения экземпляра телеграм бота
@@ -118,11 +118,11 @@ class Command(BaseCommand):
                     order.save()
                     # проверяем актуальность срока доставки, если истёк - пишем
                     # об этом в телеграм и устанавливаем заказ неотслеживаемым
-                    order_delivery_date = datetime.datetime.strptime(
-                        order.delivery_date, '%d.%m.%Y'
-                    ).date()
-                    if order_delivery_date < datetime.date.today():
-                        if order.is_tracked:
+                    if order.is_tracked:
+                        order_delivery_date = datetime.datetime.strptime(
+                            order.delivery_date, '%d.%m.%Y'
+                        ).date()
+                        if order_delivery_date < datetime.date.today():
                             send_message(
                                 bot,
                                 DELIVERY_TIME_EXPIRED.format(order.num_order)
