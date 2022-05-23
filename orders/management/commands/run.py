@@ -100,18 +100,18 @@ class Command(BaseCommand):
                             price_rub=price_rub,
                             delivery_date=delivery_date
                         )
-                        order = Order.objects.get(id=order_id)
+                        continue
                     # смотрим, есть ли изменения заказа в гугл таблице, если да,
                     # то изменяем его в БД тоже
-                    if num_order != order.num_order:
+                    if order.num_order != num_order:
                         order.num_order = num_order
-                    elif price != order.price_usd:
+                    elif order.price_usd != price:
                         # если цена в долларах изменилась, то изменяем и цену
                         # в рублях соответственно по нынешнему курсу
                         order.price_usd = price
                         rates = ExchangeRates(str(datetime.date.today()))
                         order.price_rub = int(price) * int(rates['USD'].value)
-                    elif delivery_date != order.price:
+                    elif order.delivery_date != delivery_date:
                         order.delivery_date = delivery_date
                         order.is_tracked = True
                     order.save()
