@@ -28,6 +28,8 @@ class Order(models.Model):
         max_length=10,
         validators=[validate_delivery_date]
     )
+    # этот атрибут нужен чтобы не отправлять сообщение об истечении
+    # срока доставки несколько раз, устанавливаем False, когда срок истёк
     is_tracked = models.BooleanField(verbose_name='Отслеживаемый', default=True)
 
     class Meta:

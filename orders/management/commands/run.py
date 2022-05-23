@@ -100,6 +100,7 @@ class Command(BaseCommand):
                             price_rub=price_rub,
                             delivery_date=delivery_date
                         )
+                        # сразу переходим на следующую итерацию
                         continue
                     # смотрим, есть ли изменения заказа в гугл таблице, если да,
                     # то изменяем его в БД тоже
