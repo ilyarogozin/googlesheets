@@ -60,7 +60,7 @@ class Command(BaseCommand):
                     text=message
                 )
             except telegram.error.TelegramError as error:
-                raise SendMessageError(ERROR_SENDING_MESSAGE.format(error))
+                logging.exception(ERROR_SENDING_MESSAGE.format(error))
             else:
                 logging.info(MESSAGE_SENT_SUCCESSFULLY.format(message))
 
