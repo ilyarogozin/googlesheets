@@ -142,7 +142,7 @@ class Command(BaseCommand):
                         ORDER_IS_DELETED.format(order_id)
                     )
                 # ждем 5 минут
-                time.sleep(60)
+                time.sleep(300)
             # ловим все ошибки для безотказности программы
             # и отправляем их в телеграм и лог-файл
             except Exception as error:
