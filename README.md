@@ -1,5 +1,10 @@
 # GOOGLE SHEETS TEST PROJECT
 
+- Ссылка на Google Sheets документ:
+```
+https://docs.google.com/spreadsheets/d/1uA_FvQ_metf0MDKgyMRhNok0_Y-nktspVhbkM1b9AMM/edit#gid=0
+```
+
 # Как запустить проект:
 - Установите Docker, инструкция:
 https://docs.docker.com/get-docker/

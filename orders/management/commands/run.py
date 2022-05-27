@@ -78,11 +78,13 @@ class Command(BaseCommand):
         # и смотрим измения/добавления/удаления строк
         while True:
             try:
+                # читаем google таблицу
                 table = service.spreadsheets().values().get(
                     spreadsheetId=SPREADSHEET_ID,
                     range='A2:E1000',
                     majorDimension='ROWS'
                 ).execute()
+                # собираем айдишники заказов в таблице, чтобы потом сравнить наличие их в БД
                 table_ids = []
                 for order_id, num_order, price, delivery_date in table['values']:
                     table_ids.append(int(order_id))
@@ -131,16 +133,16 @@ class Command(BaseCommand):
                             order.save()
                 # смотрим, есть ли удаленённые заказы в гугл таблице,
                 # если да, то удаляем их из БД тоже и пишем об этом в телеграм
-                order_ids = list(Order.objects.values_list('id', flat=True))
-                for order_id in order_ids:
-                    if order_id not in table_ids:
-                        Order.objects.get(id=order_id).delete()
-                        send_message(
-                            bot,
-                            ORDER_IS_DELETED.format(order_id)
-                        )
+                order_ids = set(Order.objects.values_list('id', flat=True))
+                deleted_orders = order_ids.difference(set(table_ids))
+                for order_id in deleted_orders:
+                    Order.objects.get(id=order_id).delete()
+                    send_message(
+                        bot,
+                        ORDER_IS_DELETED.format(order_id)
+                    )
                 # ждем 5 минут
-                time.sleep(300)
+                time.sleep(60)
             # ловим все ошибки для безотказности программы
             # и отправляем их в телеграм и лог-файл
             except Exception as error:
