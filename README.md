@@ -17,7 +17,7 @@ https://docs.docker.com/compose/install/
 git clone git@github.com:ilyarogozin/googlesheets.git
 ```
 
-- Узнайте id своего телеграм чата написав боту t.me/userinfobot и установите его в переменную CHAT_ID .env файла(см. ниже), после этого обязательно активируйте бота t.me/GoogleSheetsTestMyBot чтобы получать сообщения
+- Узнайте id своего телеграм чата, написав боту t.me/userinfobot, и установите его в переменную CHAT_ID .env файла(см. ниже), после этого обязательно активируйте бота t.me/GoogleSheetsTestMyBot чтобы получать сообщения
 
 - Создайте файл окружения .env, который будет содержать:
 ```
