@@ -134,7 +134,7 @@ class Command(BaseCommand):
                 # смотрим, есть ли удаленённые заказы в гугл таблице,
                 # если да, то удаляем их из БД тоже и пишем об этом в телеграм
                 order_ids = set(Order.objects.values_list('id', flat=True))
-                deleted_orders = order_ids.difference(set(table_ids))
+                deleted_orders = order_ids.difference(table_ids)
                 for order_id in deleted_orders:
                     Order.objects.get(id=order_id).delete()
                     send_message(
