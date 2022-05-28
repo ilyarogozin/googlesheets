@@ -85,9 +85,9 @@ class Command(BaseCommand):
                     majorDimension='ROWS'
                 ).execute()
                 # собираем айдишники заказов в таблице, чтобы потом сравнить наличие их в БД
-                table_ids = []
+                table_ids = set()
                 for order_id, num_order, price, delivery_date in table['values']:
-                    table_ids.append(int(order_id))
+                    table_ids.add(int(order_id))
                     # смотрим, есть ли этот заказ в БД, если нет, то добавляем
                     try:
                         order = Order.objects.get(id=order_id)
