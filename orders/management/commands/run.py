@@ -38,6 +38,19 @@ ORDER_IS_DELETED = 'Заказ с id={} удалён.'
 DELIVERY_TIME_EXPIRED = 'Срок доставки заказа {} истёк.'
 
 
+def send_message(bot, message):
+            """Отправляет в Telegram сообщение."""
+            try:
+                bot.send_message(
+                    chat_id=CHAT_ID,
+                    text=message
+                )
+            except telegram.error.TelegramError as error:
+                logging.exception(ERROR_SENDING_MESSAGE.format(error))
+            else:
+                logging.info(MESSAGE_SENT_SUCCESSFULLY.format(message))
+
+
 class Command(BaseCommand):
     def handle(self, *args, **options):
         logging.basicConfig(
@@ -51,18 +64,6 @@ class Command(BaseCommand):
         class SendMessageError(Exception):
             """Кастомная ошибка при неотправленном сообщении."""
             pass
-
-        def send_message(bot, message):
-            """Отправляет в Telegram сообщение."""
-            try:
-                bot.send_message(
-                    chat_id=CHAT_ID,
-                    text=message
-                )
-            except telegram.error.TelegramError as error:
-                logging.exception(ERROR_SENDING_MESSAGE.format(error))
-            else:
-                logging.info(MESSAGE_SENT_SUCCESSFULLY.format(message))
 
         # получаем экземпляр нашего телеграм бота
         bot = telegram.Bot(token=TELEGRAM_TOKEN)
